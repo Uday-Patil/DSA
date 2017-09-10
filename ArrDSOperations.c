@@ -4,12 +4,17 @@
  Author      : Uday Patil
  Version     :
  Copyright   : Your copyright notice
- Description : Insertion Operation
-			   Insert operation is to insert one or more data elements into
-			   an array. Based on the requirement, a new element can be added
-			   at the beginning, end, or any given index of array. Here, we
-			   see a practical implementation of insertion operation, where
-			   we add data at the end of the array
+ Description : Array Data Structure Operations:
+				i. 	Initialization of array using Dynamic memory allocation technique.
+			   ii.	Insert operation is to insert a data element into an array. 
+					Based on the requirement, a new element can be added at the beginning,
+					end, or any given index of array. Here, we see a practical implementation
+					of insertion operation, where we add data at the end of the array.
+			  iii.	Delete operation is to delete a data element from an array. 
+					Based on the requirement, an element can be deleted
+					at the beginning, end, or any given index of array. Here, we
+					see a practical implementation of deletion operation, where
+					we delete data from an array.
  ============================================================================
  */
 
