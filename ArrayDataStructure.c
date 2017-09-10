@@ -13,54 +13,11 @@
  ============================================================================
  */
 
-#include <stdio.h>
+
 #include <stdlib.h>
-
+#include "arr.h"
 #include <stdio.h>
 
-/* function to initialise an array */
-int * initArray(int n) {
-	static int* ptr;
-	int i;
-	
-	ptr = (int*)calloc(n,sizeof(int));
-	
-	for ( i = 0; i < n; ++i) {
-		scanf("%d", ptr+i);
-	}
-	
-	return (ptr);
-}
-
-/* function to insert an element at a given in to the passed array */
-int * insertElement(int *p, int element, int size, int pos) {
-	int i;
-	
-	if(pos <= size) {
-		for(i=size-1; i>= pos-1; i--)
-		{
-			*(p+(i+1)) = *(p+i);
-		}
-	} 
-	else {
-		printf("\n Position out of bound");
-	}
-	*(p+(pos-1)) = element;
-	return p;
-}
-
-/* function to delete an element from the passed array to the provided index */
-int * deleteElement(int *p, int pos, int size) {
-	int i=pos;
-	
-	while( i<size) {
-		*(p+(i-1)) = *(p+i);
-		printf("\n %d at %d", *(p+(i-1)), i);
-		i++;
-	}
-	
-	return p;
-}
 
 
 /* main function to call various Data Structure algorithms */
@@ -79,7 +36,7 @@ int main () {
 	
 	printf("\n You entered the following elements: ");
 	for ( i = 0; i < n; i++ ) {
-		printf("\n arr[%d] = %d", i, *(ptr + i));
+		printf("\n arr[%d] = %d", i+1, *(ptr + i));
 	}
 
 	printf("\n Please make a choice:");
@@ -99,32 +56,24 @@ int main () {
 		break;
 			
 		case 1: 
-			printf("\n Enter the element to insert: ");
-			scanf("%d", &ele);
-			printf("\n Enter the position where element should be inserted: ");
-			scanf("%d", &pos);
-			
-			ptr = insertElement(ptr, ele, n, pos);
+			ptr = insertElement(ptr, n);
 			n+=1;
 			
 			printf("\n Array elements after insertion: ");
 			
 			for ( i = 0; i < n; i++ ) {
-				printf("\n arr[%d] = %d", i, *(ptr + i));
+				printf("\n arr[%d] = %d", i+1, ptr[i]);
 			}
 		break;
 		
 		case 2:
-			printf("\n Enter the position at which element should be deleted: ");
-			scanf("%d", &pos);
-			
-			ptr = deleteElement(ptr, pos, n);
+			ptr = deleteElement(ptr, n);
 			n-=1;
 			
 			printf("\n Array elements after deletion: ");
 			
 			for ( i = 0; i < n; i++ ) {
-				printf("\n arr[%d] = %d", i, *(ptr + i));
+				printf("\n arr[%d] = %d", i+1, ptr[i]);
 			}
 		break;
 		
