@@ -40,10 +40,10 @@ int main () {
 	}
 
 	printf("\n Please make a choice:");
+	printf("\n Press 0 to exit");
 	printf("\n Press 1 to insert an element at a given index");
 	printf("\n Press 2 to delete an element at a given index");
-	printf("\n Press 0 to exit");
-	//printf("\n Press 3 to update an element");
+	printf("\n Press 3 to update an element");
 	//printf("\n Press 4 to search an element");
 	printf("\n Your choice: ");
 	scanf("%d", &ch);
@@ -71,6 +71,16 @@ int main () {
 			n-=1;
 			
 			printf("\n Array elements after deletion: ");
+			
+			for ( i = 0; i < n; i++ ) {
+				printf("\n arr[%d] = %d", i+1, ptr[i]);
+			}
+		break;
+		
+		case 3:
+			ptr = updateElement(ptr, n);
+			
+			printf("\n Array elements after update are: ");
 			
 			for ( i = 0; i < n; i++ ) {
 				printf("\n arr[%d] = %d", i+1, ptr[i]);

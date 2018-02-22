@@ -19,3 +19,6 @@ int * insertElement(int *p,int size);
 
 /* function to delete an element from the passed array to the provided index */
 int * deleteElement(int *p, int size);
+
+/* function to update an element in the existing array */
+int * updateElement(int *p, int size);

@@ -81,3 +81,25 @@ int * deleteElement(int *p, int size) {
 	
 	return p;
 }
+
+/* function to update an element from the passed array at the provided index */
+int * updateElement(int *p, int size) {
+	int ele, pos;
+	
+	again:
+	printf("\n Enter the position at which element should be updated: ");
+	scanf("%d", &pos);
+	
+	printf("\n Enter the element to update: ");
+	scanf("%d", &ele);
+	
+	if(pos < size){
+		*(p+(pos-1))=ele;
+		
+	} else {
+		printf("\n Invalid position, please enter a valid position");
+		goto again;
+	}
+	
+	return p;
+}
