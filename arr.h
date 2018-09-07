@@ -10,15 +10,15 @@
 			   algorithms based on Arrays
  ============================================================================
  */
+#include <stdio.h>
 /* function to initialise an array */
-int * initArray(int n)
-
+int * initArray(int n);
 
 /* function to insert an element at a given in to the passed array */
-int * insertElement(int *p, int element, int size, int pos)
-
+int * insertElement(int *p,int size);
 
 /* function to delete an element from the passed array to the provided index */
-int * deleteElement(int *p, int pos, int size)
+int * deleteElement(int *p, int size);
 
-
+/* function to update an element in the existing array */
+int * updateElement(int *p, int size);
